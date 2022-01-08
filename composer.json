@@ -1,0 +1,25 @@
+{
+    "name": "vladimir-s/transliterator-ukr",
+    "description": "Ukrainian transliteration of Unicode text accoding to official rules",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "VladimirS\\TransliteratorUkr\\": "src/VladimirS/TransliteratorUkr"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\VladimirS\\Transliterator\\": "tests/VladimirS/TransliteratorUkr"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vladimir Statsenko",
+            "email": "vovchiksta@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "9.5"
+    }
+}
