@@ -7,6 +7,12 @@ use VladimirS\TransliteratorUkr\TransliteratorUkr;
 
 class TransliteratorUkrTest extends TestCase
 {
+    /*
+    Проверить:
+    https://github.com/Yoast/PHPUnit-Polyfills
+    https://phpunit.de/supported-versions.html
+    */
+
     public function testConvert()
     {
         $this->assertEquals('Alushta', TransliteratorUkr::convert('Алушта'));
