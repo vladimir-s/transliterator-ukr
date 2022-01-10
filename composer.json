@@ -13,7 +13,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\VladimirS\\Transliterator\\": "tests/VladimirS/TransliteratorUkr"
+            "Tests\\VladimirS\\TransliteratorUkr\\": "tests/VladimirS/TransliteratorUkr"
         }
     },
     "authors": [
