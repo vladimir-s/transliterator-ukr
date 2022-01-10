@@ -15,9 +15,10 @@ class TransliteratorUkrTest extends TestCase
 
     public function testConvert()
     {
-        $this->assertEquals('Alushta', TransliteratorUkr::convert('Алушта'));
-        $this->assertEquals('Andrii', TransliteratorUkr::convert('Андрій'));
-        $this->assertEquals('Borshchahivka', TransliteratorUkr::convert('Борщагівка'));
-        $this->assertEquals('Borysenko', TransliteratorUkr::convert('Борисенко'));
+        $transliterator = new TransliteratorUkr();
+        $this->assertEquals('Alushta', $transliterator->convert('Алушта'));
+        $this->assertEquals('Andrii', $transliterator->convert('Андрій'));
+        $this->assertEquals('Borshchahivka', $transliterator->convert('Борщагівка'));
+        $this->assertEquals('Borysenko', $transliterator->convert('Борисенко'));
     }
 }

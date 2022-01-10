@@ -3,6 +3,9 @@
     "description": "Ukrainian transliteration of Unicode text accoding to official rules",
     "type": "library",
     "license": "MIT",
+    "require": {
+        "php": ">=7.3"
+    },
     "autoload": {
         "psr-4": {
             "VladimirS\\TransliteratorUkr\\": "src/VladimirS/TransliteratorUkr"

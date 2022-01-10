@@ -4,7 +4,20 @@ namespace VladimirS\TransliteratorUkr;
 
 class TransliteratorUkr
 {
-    public static function convert($text)
+    /** @var Symbol $symbol */
+    private $symbol;
+
+    public function __construct()
+    {
+        $this->symbol = new Symbol();
+    }
+
+    /**
+     * @param string $text
+     *
+     * @return string
+     */
+    public function convert(string $text): string
     {
         $result     = '';
         $wordBegin  = true;
@@ -13,17 +26,17 @@ class TransliteratorUkr
         $i          = 0;
         while ($i < $textLength) {
             $curSymbol = $symbols[$i];
-            if (PunctuationMarks::isPunctuationMark($curSymbol)) {
-                $result    .= PunctuationMarks::getPunctuationMark($curSymbol);
+            if ($this->symbol->isPunctuationMark($curSymbol)) {
+                $result    .= $this->symbol->getPunctuationMark($curSymbol);
                 $wordBegin = true;
                 $i++;
-            } elseif (LettersUkr::isLetter($curSymbol)) {
+            } elseif ($this->symbol->isLetter($curSymbol)) {
                 $nextSumbol = $symbols[$i + 1] ?? '';
-                if (LettersUkr::isLetterCombination($curSymbol . $nextSumbol)) {
-                    $result .= LettersUkr::getLettersCombination($curSymbol . $nextSumbol);
+                if ($this->symbol->isLetterCombination($curSymbol.$nextSumbol)) {
+                    $result .= $this->symbol->getLettersCombination($curSymbol.$nextSumbol);
                     $i      += 2;
                 } else {
-                    $result .= LettersUkr::getLetter($curSymbol, $wordBegin);
+                    $result .= $this->symbol->getLetter($curSymbol, $wordBegin);
                     $i++;
                 }
                 $wordBegin = false;
