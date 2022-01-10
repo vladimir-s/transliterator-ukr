@@ -41,7 +41,8 @@ class TransliteratorUkr
                 }
                 $wordBegin = false;
             } else {
-                $wordBegin = true;
+                $result .= $curSymbol;
+                $wordBegin = false;
                 $i++;
             }
         }
