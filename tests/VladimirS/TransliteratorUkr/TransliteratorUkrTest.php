@@ -29,6 +29,16 @@ class TransliteratorUkrTest extends TestCase
         $this->assertEquals($translit, $this->transliterator->convert($original));
     }
 
+    /**
+     * @dataProvider fileNamesForTranslitProvider
+     */
+    public function testFileConverter(string $originalFileName, string $translitFileName): void
+    {
+        $original = file_get_contents(__DIR__.'/texts/'.$originalFileName);
+        $translit = file_get_contents(__DIR__.'/texts/'.$translitFileName);
+        $this->assertEquals($translit, $this->transliterator->convert($original));
+    }
+
     public function textForTranslitProvider(): array
     {
         return [
@@ -108,6 +118,15 @@ class TransliteratorUkrTest extends TestCase
             ['Розгон', 'Rozghon'],
             ['тест 123', 'test 123'],
             ['тест 123ре', 'test 123re'],
+        ];
+    }
+
+    public function fileNamesForTranslitProvider(): array
+    {
+        return [
+            ['bib.txt', 'bib.translit.txt'],
+            ['bib2.txt', 'bib2.translit.txt'],
+            ['bib3.txt', 'bib3.translit.txt'],
         ];
     }
 }
