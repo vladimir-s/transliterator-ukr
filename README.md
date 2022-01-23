@@ -42,3 +42,17 @@ $text = '';
 $transliterator = new TransliteratorUkr();
 $translit = $transliterator->convert('text');
 ```
+
+## Development
+
+Install PHP-CS-Fixer
+
+```
+$ composer install --working-dir=tools/php-cs-fixer
+```
+
+Run PHP-CS-Fixer
+
+```
+$ tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src
+```
