@@ -26,11 +26,7 @@ class TransliteratorUkr
         $i          = 0;
         while ($i < $textLength) {
             $curSymbol = $symbols[$i];
-            if ($this->symbol->isPunctuationMark($curSymbol)) {
-                $result    .= $this->symbol->getPunctuationMark($curSymbol);
-                $wordBegin = true;
-                $i++;
-            } elseif ($this->symbol->isLetter($curSymbol)) {
+            if ($this->symbol->isLetter($curSymbol)) {
                 $nextSumbol = $symbols[$i + 1] ?? '';
                 if ($this->symbol->isLetterCombination($curSymbol.$nextSumbol)) {
                     $result .= $this->symbol->getLettersCombination($curSymbol.$nextSumbol);
@@ -42,7 +38,7 @@ class TransliteratorUkr
                 $wordBegin = false;
             } else {
                 $result .= $curSymbol;
-                $wordBegin = false;
+                $wordBegin = true;
                 $i++;
             }
         }

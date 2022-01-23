@@ -78,18 +78,6 @@ class Symbol
         'зг' => ['zgh'],
     ];
 
-    private $punctuationMarks = [
-        '.' => '.',
-        ',' => ',',
-        ';' => ';',
-        ':' => ':',
-        '?' => '?',
-        '!' => '!',
-        '-' => '-',
-        '"' => '"',
-        ' ' => ' ',
-    ];
-
     /**
      * @param string $symbol
      *
@@ -140,31 +128,6 @@ class Symbol
         $res = '';
         if (isset($this->lettersCombination[$symbols])) {
             $res = $this->lettersCombination[$symbols][0];
-        }
-
-        return $res;
-    }
-
-    /**
-     * @param string $symbol
-     *
-     * @return bool
-     */
-    public function isPunctuationMark(string $symbol): bool
-    {
-        return isset($this->punctuationMarks[$symbol]);
-    }
-
-    /**
-     * @param string $symbol
-     *
-     * @return string
-     */
-    public function getPunctuationMark(string $symbol): string
-    {
-        $res = '';
-        if (isset($this->punctuationMarks[$symbol])) {
-            $res = $this->punctuationMarks[$symbol];
         }
 
         return $res;
