@@ -1,5 +1,9 @@
 # Transliterator for Ukrainian language
 
+## Status
+
+![Tests](https://github.com/vladimir-s/transliterator-ukr/actions/workflows/php.yml/badge.svg)
+
 ## Transliteration rules
 
 The transliteration rules correspond to
