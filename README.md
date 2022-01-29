@@ -61,4 +61,6 @@ Run tests
 
 ```
 $ ./vendor/bin/phpunit tests/
+or
+$ composer test
 ```
