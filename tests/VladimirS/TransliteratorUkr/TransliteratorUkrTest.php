@@ -123,7 +123,9 @@ class TransliteratorUkrTest extends TestCase
             ['Юрій{Яготин}', 'Yurii{Yahotyn}'],
             ['Знам\'янка — Корюківка', 'Znamianka — Koriukivka'],
             ['єхидно«11»єхидно<b>test</b>', 'yekhydno«11»yekhydno<b>test</b>'],
-            ['<a href="#">транслітерація - заміна <i>Літер кирилиці</i> латинськими Літерами</a>', '<a href="#">transliteratsiia - zamina <i>Liter kyrylytsi</i> latynskymy Literamy</a>']
+            ['<a href="#">транслітерація - заміна <i>Літер кирилиці</i> латинськими Літерами</a>', '<a href="#">transliteratsiia - zamina <i>Liter kyrylytsi</i> latynskymy Literamy</a>'],
+            ['Дем’янчук Юрій Вікторович', 'Demianchuk Yurii Viktorovych'],
+            ['Коваль Юрій Вікторович', 'Koval Yurii Viktorovych'],
         ];
     }
 
