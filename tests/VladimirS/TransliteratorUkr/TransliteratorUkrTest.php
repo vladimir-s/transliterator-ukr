@@ -126,6 +126,7 @@ class TransliteratorUkrTest extends TestCase
             ['<a href="#">транслітерація - заміна <i>Літер кирилиці</i> латинськими Літерами</a>', '<a href="#">transliteratsiia - zamina <i>Liter kyrylytsi</i> latynskymy Literamy</a>'],
             ['Дем’янчук Юрій Вікторович', 'Demianchuk Yurii Viktorovych'],
             ['Коваль Юрій Вікторович', 'Koval Yurii Viktorovych'],
+            ['СТРУМІНСЬКА ОКСАНА ПЕТРІВНА', 'STRUMINSKA OKSANA PETRIVNA'],
         ];
     }
 

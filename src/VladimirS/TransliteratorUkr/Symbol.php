@@ -72,6 +72,7 @@ class Symbol
         "'" => [''],
         "’" => [''],
         'ь' => [''],
+        'Ь' => [''],
     ];
 
     private $lettersCombination = [
